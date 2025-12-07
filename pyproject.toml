@@ -1,0 +1,28 @@
+[tool.black]
+line-length = 88
+target-version = ['py312']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "E203",  # whitespace before ':', conflicts with Black
+    "W503",  # line break before binary operator, conflicts with Black
+]
+
+[tool.isort]
+profile = "black"
+
+[project]
+name = "practice-planner"
+version = "0.1.0"
+description = "A practice planner with timer and metronome"
+authors = [{ name = "Hasse" }]
+dependencies = [
+    "black",
+    "flake8",
+#    "tkinter", # note: tkinter is part of stdlib, no pip install needed
+]
+
+[project.scripts]
+practice-planner = "practice_planner.main:main"
+

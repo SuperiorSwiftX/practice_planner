@@ -1,0 +1,20 @@
+# Ignore everything in _super
+*
+
+# But keep these
+!README.md
+!.gitignore
+!pyproject.toml
+!practice_planner/
+!practice_planner/**
+
+# Inside practice_planner, ignore Python artifacts
+practice_planner/__pycache__/
+practice_planner/*.py[cod]
+practice_planner/build/
+practice_planner/dist/
+practice_planner/*.spec
+practice_planner/venv/
+practice_planner/.env
+practice_planner/.DS_Store
+
